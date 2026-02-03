@@ -1,18 +1,17 @@
-/* DONKEY — refined dollar-paper background */
+/* DONKEY — background match (green → paper white, textured) */
 
 :root{
   --ink: rgba(255,255,255,0.95);
-  --muted: rgba(255,255,255,0.80);
+  --muted: rgba(255,255,255,0.85);
 
-  /* money palette */
-  --g1:#0b2a1a;   /* deep money green */
-  --g2:#1f4d34;   /* dark green */
-  --g3:#3f6f4e;   /* mid green */
-  --g4:#9fb08f;   /* paper green */
+  /* palette sampled from reference */
+  --top-dark: #243a2c;
+  --top-mid:  #3f5a47;
+  --mid:      #7f917a;
+  --paper:    #f3f1ea;
 }
 
 *{ box-sizing:border-box; }
-
 html,body{ height:100%; }
 
 body{
@@ -21,20 +20,22 @@ body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   color: var(--ink);
 
-  /* base gradient */
+  /* main gradient (matches image flow) */
   background:
-    linear-gradient(165deg,
-      var(--g1) 0%,
-      var(--g2) 28%,
-      var(--g3) 55%,
-      var(--g4) 100%
+    linear-gradient(
+      180deg,
+      var(--top-dark) 0%,
+      var(--top-mid) 28%,
+      var(--mid) 55%,
+      var(--paper) 78%,
+      #ffffff 100%
     );
 
   min-height:100vh;
   overflow-x:hidden;
 }
 
-/* PAPER TEXTURE LAYER */
+/* PAPER GRAIN + SOFT VIGNETTE */
 body::before{
   content:"";
   position:fixed;
@@ -42,23 +43,20 @@ body::before{
   pointer-events:none;
 
   background:
-    /* soft highlights */
-    radial-gradient(900px 500px at 15% 10%, rgba(255,255,255,0.12), transparent 60%),
-    radial-gradient(700px 400px at 85% 25%, rgba(255,255,255,0.10), transparent 55%),
+    /* vignette */
+    radial-gradient(1200px 700px at 50% 15%, rgba(0,0,0,0.35), transparent 55%),
+    radial-gradient(1200px 700px at 50% 90%, rgba(255,255,255,0.65), transparent 60%),
 
-    /* subtle vignette */
-    radial-gradient(1200px 900px at 50% 80%, rgba(0,0,0,0.25), transparent 60%),
-
-    /* paper grain */
+    /* paper fiber lines */
     repeating-linear-gradient(
       0deg,
-      rgba(255,255,255,0.035) 0px,
-      rgba(255,255,255,0.035) 1px,
+      rgba(255,255,255,0.04) 0px,
+      rgba(255,255,255,0.04) 1px,
       transparent 2px,
       transparent 4px
     );
 
-  opacity:0.75;
+  opacity:0.8;
   mix-blend-mode:overlay;
 }
 
@@ -66,17 +64,17 @@ body::before{
 body::after{
   content:"";
   position:fixed;
-  inset:-20%;
+  inset:-15%;
   pointer-events:none;
 
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
 
-  opacity:0.08;
+  opacity:0.07;
   mix-blend-mode:multiply;
 }
 
-/* TYPOGRAPHY & SPACING (NO CONTENT CHANGE) */
+/* LAYOUT — keep content unchanged */
 h1,h2,p,hr{
   max-width:900px;
   margin-left:auto;
@@ -103,6 +101,6 @@ em{ color:var(--ink); font-weight:700; }
 hr{
   border:0;
   height:1px;
-  background:rgba(255,255,255,0.45);
+  background:rgba(255,255,255,0.55);
   margin:22px auto;
 }
