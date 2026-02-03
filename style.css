@@ -1,15 +1,108 @@
-body {
-  background: linear-gradient(135deg, #0f2a1c, #2f5f41, #a9b48b);
-  color: white;
-  font-family: Arial, sans-serif;
+/* DONKEY — refined dollar-paper background */
+
+:root{
+  --ink: rgba(255,255,255,0.95);
+  --muted: rgba(255,255,255,0.80);
+
+  /* money palette */
+  --g1:#0b2a1a;   /* deep money green */
+  --g2:#1f4d34;   /* dark green */
+  --g3:#3f6f4e;   /* mid green */
+  --g4:#9fb08f;   /* paper green */
 }
 
-h1 {
-  font-size: 72px;
-  text-align: center;
+*{ box-sizing:border-box; }
+
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  padding:56px 18px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color: var(--ink);
+
+  /* base gradient */
+  background:
+    linear-gradient(165deg,
+      var(--g1) 0%,
+      var(--g2) 28%,
+      var(--g3) 55%,
+      var(--g4) 100%
+    );
+
+  min-height:100vh;
+  overflow-x:hidden;
 }
 
-p, h2 {
-  text-align: center;
-  font-size: 20px;
+/* PAPER TEXTURE LAYER */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+
+  background:
+    /* soft highlights */
+    radial-gradient(900px 500px at 15% 10%, rgba(255,255,255,0.12), transparent 60%),
+    radial-gradient(700px 400px at 85% 25%, rgba(255,255,255,0.10), transparent 55%),
+
+    /* subtle vignette */
+    radial-gradient(1200px 900px at 50% 80%, rgba(0,0,0,0.25), transparent 60%),
+
+    /* paper grain */
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.035) 0px,
+      rgba(255,255,255,0.035) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+
+  opacity:0.75;
+  mix-blend-mode:overlay;
+}
+
+/* MICRO NOISE (VERY SUBTLE) */
+body::after{
+  content:"";
+  position:fixed;
+  inset:-20%;
+  pointer-events:none;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+
+  opacity:0.08;
+  mix-blend-mode:multiply;
+}
+
+/* TYPOGRAPHY & SPACING (NO CONTENT CHANGE) */
+h1,h2,p,hr{
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+h1{
+  font-size:72px;
+  letter-spacing:0.04em;
+  margin:0 auto 14px;
+}
+
+p{
+  font-size:16px;
+  line-height:1.6;
+  color:var(--muted);
+  margin:10px auto;
+}
+
+strong{ color:var(--ink); }
+em{ color:var(--ink); font-weight:700; }
+
+hr{
+  border:0;
+  height:1px;
+  background:rgba(255,255,255,0.45);
+  margin:22px auto;
 }
