@@ -104,3 +104,58 @@ hr{
   background:rgba(255,255,255,0.55);
   margin:22px auto;
 }
+/* BANKNOTE FRAME */
+.note{
+  max-width: 980px;
+  margin: 26px auto;
+  padding: 44px 26px;
+
+  background: rgba(255,255,255,0.10);
+  border-radius: 24px;
+
+  /* outer border */
+  border: 1px solid rgba(255,255,255,0.28);
+
+  /* inner double-line frame */
+  box-shadow:
+    0 0 0 2px rgba(0,0,0,0.10) inset,
+    0 0 0 10px rgba(255,255,255,0.10) inset,
+    0 18px 55px rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Guilloche-ish ornament (subtle, not busy) */
+.note::before{
+  content:"";
+  position:absolute;
+  inset:-25%;
+  pointer-events:none;
+  opacity: 0.18;
+
+  background:
+    radial-gradient(circle at 35% 40%, rgba(255,255,255,0.35), transparent 55%),
+    radial-gradient(circle at 70% 55%, rgba(255,255,255,0.22), transparent 58%),
+    repeating-radial-gradient(
+      circle at 50% 50%,
+      rgba(255,255,255,0.12) 0px,
+      rgba(255,255,255,0.12) 1px,
+      transparent 3px,
+      transparent 8px
+    );
+  transform: rotate(-8deg);
+  mix-blend-mode: overlay;
+}
+
+/* Make hr look like banknote separators */
+hr{
+  height: 1px;
+  background: rgba(255,255,255,0.40);
+}
+
+/* Scale down a bit on small screens */
+@media (max-width: 520px){
+  .note{ padding: 34px 16px; border-radius: 18px; }
+  h1{ font-size: 56px; }
+}
