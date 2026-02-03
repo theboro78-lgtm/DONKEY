@@ -2,41 +2,247 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DONKEY</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- Top Nav -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">D</div>
+      <div class="brand-name">donkey</div>
+    </div>
 
-<div id="hero" class="section hero">
-  <h1>DONKEY</h1>
-  <p class="tag">The most stubborn, most iconic animal meme.</p>
-  <p class="subtag">Dogs and frogs have had their day.<br>Now Donkey kicks ’em to the curb.</p>
-  <a class="btn" href="#about">Learn More ↓</a>
-</div>
+    <nav class="nav">
+      <a href="#home" class="nav-link">home</a>
+      <a href="#about" class="nav-link">about</a>
+      <a href="#buy" class="nav-link">how to buy</a>
+      <a href="#tokenomics" class="nav-link">tokenomics</a>
+      <a href="#roadmap" class="nav-link">roadmap</a>
+    </nav>
 
-<div id="about" class="section about">
-  <h2>About DONKEY</h2>
-  <p>Are we there yet? Ask not what memecoins can do for you. Ask how far the donkey can carry you.</p>
-  <p>Just a meme. No promises. No guarantees.</p>
-</div>
+    <a class="btn buy-now" href="#buy">buy now</a>
+  </header>
 
-<div id="info" class="section info">
-  <h2>Token Info</h2>
-  <p>Contract: <span class="mono">INSERT_CONTRACT_HERE</span></p>
-  <p>Blockchain: Ethereum (ERC-20)</p>
-  <p>Supply: xxxx</p>
-</div>
+  <!-- 1) HOME -->
+  <section id="home" class="section section-home">
+    <div class="container grid-2">
+      <div class="hero-copy">
+        <div class="hero-kicker">$donkey</div>
+        <h1 class="hero-title">Kick memecoins higher.</h1>
+        <p class="hero-sub">
+          The most stubborn, most iconic animal meme in the world.<br/>
+          Dogs and frogs have had their day — now Donkey kicks ’em to the curb.
+        </p>
 
-<div id="community" class="section community">
-  <h2>Join the Ride</h2>
-  <div class="links">
-    <a class="btn" href="https://x.com/">X / Twitter</a>
-    <a class="btn" href="https://t.me/">Telegram</a>
-    <a class="btn" href="#">Dexscreener</a>
-  </div>
-  <p class="small">Just a meme token — entertainment only.</p>
-</div>
+        <div class="social-row">
+          <a class="icon-btn" href="#" title="X">X</a>
+          <a class="icon-btn" href="#" title="Telegram">TG</a>
+          <a class="icon-btn" href="#" title="Dexscreener">DX</a>
+          <a class="icon-btn" href="#" title="Etherscan">ES</a>
+        </div>
 
+        <div class="pills">
+          <a class="pill" href="#">binance</a>
+          <a class="pill" href="#">coinbase</a>
+          <a class="pill" href="#">kraken</a>
+          <a class="pill" href="#">uniswap</a>
+          <a class="pill" href="#">bybit</a>
+          <a class="pill" href="#">upbit</a>
+        </div>
+
+        <div class="note">
+          Contract: <span class="mono">0x__________PASTE_CONTRACT_HERE</span>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <!-- placeholder gambar: ganti nanti dengan PNG/SVG donkey -->
+        <div class="character-card">
+          <div class="character-placeholder">
+            <div class="ears"></div>
+            <div class="face"></div>
+            <div class="snout"></div>
+          </div>
+          <div class="character-caption">DONKEY (placeholder)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tear"></div>
+
+  <!-- 2) ABOUT -->
+  <section id="about" class="section section-about">
+    <div class="container grid-2">
+      <div class="about-art">
+        <div class="character-card">
+          <div class="character-placeholder alt">
+            <div class="ears"></div>
+            <div class="face"></div>
+            <div class="snout"></div>
+          </div>
+          <div class="character-caption">about art (placeholder)</div>
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <h2 class="section-title">about</h2>
+        <p class="para">
+          Donkey is tired of watching everyone play hot potato with endless derivatives.
+          The dogs and the frogs have had their day. It’s time for the most stubborn meme
+          animal to carry the internet’s meme kingdom.
+        </p>
+        <p class="para">
+          Are we there yet? Ask not what memecoins can do for you —
+          ask how far the donkey can carry you.
+        </p>
+        <p class="fine">
+          Just a meme. No promises. No guarantees.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="tear"></div>
+
+  <!-- 3) HOW TO BUY -->
+  <section id="buy" class="section section-buy">
+    <div class="container">
+      <h2 class="section-title center">how to buy</h2>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">1</div>
+          <div class="card-body">
+            <h3 class="card-title">create a wallet</h3>
+            <p class="card-text">
+              Install a wallet (MetaMask / Rabby / your choice).
+              Desktop: install the browser extension. Mobile: use the app.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">2</div>
+          <div class="card-body">
+            <h3 class="card-title">get some ETH</h3>
+            <p class="card-text">
+              You need ETH for swapping and gas. Buy on exchange or on-ramp,
+              then send to your wallet.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">3</div>
+          <div class="card-body">
+            <h3 class="card-title">swap for $DONKEY</h3>
+            <p class="card-text">
+              Use Uniswap (or your preferred DEX), paste the contract address,
+              set slippage, confirm swap.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn big" href="#">open uniswap</a>
+        <a class="btn ghost big" href="#">view chart</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="tear"></div>
+
+  <!-- 4) TOKENOMICS -->
+  <section id="tokenomics" class="section section-tokenomics">
+    <div class="container">
+      <h2 class="section-title center">tokenomics</h2>
+
+      <div class="token-supply">
+        <div class="label">token supply:</div>
+        <div class="value">___,___,___,___,___</div>
+      </div>
+
+      <div class="grid-2 token-grid">
+        <div class="token-box">
+          <p><b>No taxes.</b> No nonsense. Simple.</p>
+          <p>LP: (set nanti) • Ownership: (set nanti)</p>
+          <p class="fine">Isi sesuai kondisi token kamu (LP burn/lock, renounce, dsb).</p>
+        </div>
+
+        <div class="donut-wrap">
+          <div class="donut">
+            <div class="donut-hole">
+              <div class="mini">distribution</div>
+              <div class="mini2">placeholder</div>
+            </div>
+          </div>
+          <div class="donut-caption">Pie/Donut placeholder</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tear"></div>
+
+  <!-- 5) ROADMAP + FOOTER -->
+  <section id="roadmap" class="section section-roadmap">
+    <div class="container">
+      <h2 class="section-title center">roadmap</h2>
+
+      <div class="road-grid">
+        <div class="road-art">
+          <div class="character-card small">
+            <div class="character-placeholder tiny"></div>
+            <div class="character-caption">left art</div>
+          </div>
+        </div>
+
+        <div class="road-box">
+          <div class="phase">Phase 1: Launch</div>
+          <div class="phase">Phase 2: Vibe & HODL</div>
+          <div class="phase">Phase 3: Meme Takeover</div>
+        </div>
+
+        <div class="road-art">
+          <div class="character-card small">
+            <div class="character-placeholder tiny alt"></div>
+            <div class="character-caption">right art</div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-icons">
+          <a class="icon-btn" href="#" title="X">X</a>
+          <a class="icon-btn" href="#" title="Telegram">TG</a>
+          <a class="icon-btn" href="#" title="Dexscreener">DX</a>
+        </div>
+
+        <p class="disclaimer">
+          $DONKEY is a meme coin with no intrinsic value or expectation of financial return.
+          This website is for entertainment only. Do your own research.
+        </p>
+      </footer>
+    </div>
+  </section>
+
+  <script>
+    // Smooth scroll offset for fixed navbar
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if(!el) return;
+        e.preventDefault();
+        const y = el.getBoundingClientRect().top + window.scrollY - 84;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
