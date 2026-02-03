@@ -4,12 +4,42 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DONKEY</title>
+
   <meta name="description" content="DONKEY — Kick Memecoins Higher." />
+  <meta name="theme-color" content="#143221" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.png" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="DONKEY" />
+  <meta property="og:description" content="Kick Memecoins Higher." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og.png" />
+  <meta property="og:url" content="https://theboro78-lgtm.github.io/DONKEY/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Performance: preload background -->
+  <link rel="preload" href="assets/dollar-bg.png" as="image" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured data (basic) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"DONKEY",
+    "url":"https://theboro78-lgtm.github.io/DONKEY/",
+    "description":"Kick Memecoins Higher.",
+    "inLanguage":"en"
+  }
+  </script>
 </head>
 
 <body>
-  <!-- subtle grain overlay -->
+  <a class="skip" href="#main">Skip to content</a>
   <div class="grain" aria-hidden="true"></div>
 
   <header class="topbar">
@@ -30,7 +60,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- SECTION 1: HERO -->
     <section id="home" class="section hero">
       <div class="wrap hero__grid">
@@ -50,23 +80,21 @@
             <a class="btn btn--ghost" href="#about">Read the lore</a>
           </div>
 
-          <div class="chips" aria-label="Links">
+          <div class="chips" aria-label="Official links">
             <a class="chip" href="#" rel="noopener">X</a>
             <a class="chip" href="#" rel="noopener">Telegram</a>
             <a class="chip" href="#" rel="noopener">DexScreener</a>
-            <a class="chip" href="#" rel="noopener">Etherscan</a>
+            <a class="chip" href="#" rel="noopener">Explorer</a>
           </div>
 
-          <p class="fineprint">
-            Just a meme. No promises. No guarantees.
-          </p>
+          <p class="fineprint">Just a meme. No promises. No guarantees.</p>
         </div>
 
         <div class="hero__art" aria-hidden="true">
-          <!-- NANTI: ganti dengan gambar donkey -->
           <div class="artcard">
             <div class="artcard__badge">ARE WE THERE YET?</div>
-            <div class="artcard__placeholder">DONKEY ART</div>
+            <div class="artcard__placeholder">DONKEY ART (TBA)</div>
+            <div class="artcard__sub">Drop your best meme here.</div>
           </div>
         </div>
       </div>
@@ -79,25 +107,27 @@
       <div class="wrap split">
         <div class="panel panel--art" aria-hidden="true">
           <div class="panel__frame">
-            <div class="panel__placeholder">ABOUT ART</div>
+            <div class="panel__placeholder">ABOUT ART (TBA)</div>
           </div>
         </div>
 
         <div class="panel panel--text">
           <h2 class="h2">about</h2>
+
           <p>
-            Donkey bukan “anak turunan” dari meme yang lagi hype — dia karakter lama,
-            keras kepala, dan selalu nyeleneh. Internet butuh ikon yang berani tampil
-            bego dengan percaya diri.
+            Donkey bukan “anak turunan hype” — dia karakter klasik: keras kepala,
+            lucu, dan kadang nyebelin (itu justru seninya). Internet butuh ikon
+            yang bisa bawa meme naik kelas tanpa pura-pura serius.
           </p>
+
           <p>
-            Kami mulai dari nol: halaman sederhana, lore jelas, dan komunitas yang
-            suka ketawa dulu—baru ngegas.
+            Kita mulai sederhana: situs ringan, lore jelas, link resmi rapi,
+            dan komunitas yang suka ketawa dulu—baru gas.
           </p>
 
           <div class="callout">
-            <strong>Catchphrase:</strong> <span>“Are we there yet?”</span><br/>
-            <span class="muted">Bahan lore untuk perjalanan menuju liga besar.</span>
+            <strong>Catchphrase:</strong> <span>“Are we there yet?”</span><br />
+            <span class="muted">Perjalanan panjang menuju liga besar — satu meme per hari.</span>
           </div>
         </div>
       </div>
@@ -115,8 +145,7 @@
             <div class="card__icon">①</div>
             <h3 class="card__title">Siapkan wallet</h3>
             <p class="card__text">
-              Gunakan wallet yang Anda nyaman (Metamask / Rabby / dsb).
-              Pastikan seed phrase aman.
+              Gunakan wallet pilihan Anda. Jaga seed phrase, jangan share ke siapa pun.
             </p>
           </article>
 
@@ -124,7 +153,7 @@
             <div class="card__icon">②</div>
             <h3 class="card__title">Isi gas</h3>
             <p class="card__text">
-              Siapkan ETH/SOL (sesuai chain yang Anda pilih) untuk biaya transaksi.
+              Siapkan gas fee (ETH/SOL sesuai chain). Lebih aman ada buffer.
             </p>
           </article>
 
@@ -132,15 +161,14 @@
             <div class="card__icon">③</div>
             <h3 class="card__title">Swap</h3>
             <p class="card__text">
-              Buka DEX, paste contract address, atur slippage seperlunya,
-              lalu swap.
+              Buka DEX, paste contract, atur slippage seperlunya, lalu swap.
             </p>
           </article>
         </div>
 
         <div class="note">
           <span class="muted">
-            (Nanti kita isi contract address, chain, dan link resmi setelah final.)
+            (Nanti kita isi contract address dan link resmi setelah final.)
           </span>
         </div>
       </div>
@@ -162,7 +190,7 @@
           <div class="box">
             <p><strong>No taxes.</strong> No theater.</p>
             <p class="muted">
-              Struktur dibuat sederhana agar mudah dipahami komunitas.
+              Struktur dibuat sederhana, transparan, dan mudah dipahami komunitas.
             </p>
             <ul class="list">
               <li>Supply: TBA</li>
@@ -209,7 +237,7 @@
 
           <p class="footer__fine">
             Donkey adalah meme coin tanpa nilai intrinsik dan tanpa ekspektasi return finansial.
-            Situs ini untuk hiburan dan komunitas.
+            Konten bersifat hiburan dan komunitas.
           </p>
         </footer>
       </div>
@@ -217,14 +245,20 @@
   </main>
 
   <script>
-    // smooth-ish anchor focus for keyboard users
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', () => {
-        const id = a.getAttribute('href');
-        const el = document.querySelector(id);
-        if (el) el.setAttribute('tabindex', '-1');
+    // Reveal-on-scroll (professional, lightweight)
+    const targets = document.querySelectorAll(
+      '.section .wrap, .card, .panel, .road__item, .stat, .box, .badgeArt, .artcard'
+    );
+
+    targets.forEach(el => el.classList.add('reveal'));
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('is-in');
       });
-    });
+    }, { threshold: 0.12 });
+
+    targets.forEach(el => io.observe(el));
   </script>
 </body>
 </html>
